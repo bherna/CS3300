@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :production do
+	gem 'pg'
   gem 'rails_12factor'
 end
 
