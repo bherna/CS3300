@@ -17,7 +17,11 @@ RSpec.describe ProjectsController, type: :controller do
 
       #expects repsonse to be status code success/true/200
       # expect(response.success).to eq(true)
-      expect(response).to be_success
+      #expect(response).to be_success
+
+      #since my response is an object of index
+      #i need to check for that instead of 200
+      expect(response).to render_template("index")
     end
   end
 
@@ -31,7 +35,10 @@ RSpec.describe ProjectsController, type: :controller do
       get :show, params: { id: project }
 
       #expect the response to be true (from get method and project being created)
-      expect(response).to be_success
+      #expect(response).to be_success
+
+      #this get should render the 'projects/all projects' page
+      expect(response).to render_template("projects/show")
     end
   end
 end

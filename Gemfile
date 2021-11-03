@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 #gem 'mini_racer'
 gem 'rspec', '~> 3.7'
 
+gem 'rails-controller-testing'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
